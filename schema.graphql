@@ -1,3 +1,5 @@
+directive @public on FIELD_DEFINITION
+
 extend schema
   @link(
     url: "https://specs.apollo.dev/federation/v2.3",
