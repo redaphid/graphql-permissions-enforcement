@@ -45,8 +45,13 @@ export type QueryThingArgs = {
 
 export type Thing = {
   __typename?: 'Thing';
+  dreams: Array<Scalars['String']['output']>;
+  hasHair?: Maybe<Scalars['Boolean']['output']>;
+  hopes: Array<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
   name?: Maybe<Scalars['String']['output']>;
+  size?: Maybe<Scalars['String']['output']>;
+  teeth?: Maybe<Scalars['Int']['output']>;
 };
 
 export type WithIndex<TObject> = TObject & Record<string, any>;
@@ -139,6 +144,7 @@ export type ResolversTypes = ResolversObject<{
   Query: ResolverTypeWrapper<{}>;
   Thing: ResolverTypeWrapper<Thing>;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']['output']>;
+  Int: ResolverTypeWrapper<Scalars['Int']['output']>;
 }>;
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -150,6 +156,7 @@ export type ResolversParentTypes = ResolversObject<{
   Query: {};
   Thing: Thing;
   Boolean: Scalars['Boolean']['output'];
+  Int: Scalars['Int']['output'];
 }>;
 
 export type PublicDirectiveArgs = { };
@@ -166,8 +173,13 @@ export type QueryResolvers<ContextType = DataSourceContext, ParentType extends R
 
 export type ThingResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['Thing'] = ResolversParentTypes['Thing']> = ResolversObject<{
   __resolveReference?: ReferenceResolver<Maybe<ResolversTypes['Thing']>, { __typename: 'Thing' } & GraphQLRecursivePick<ParentType, {"id":true}>, ContextType>;
+  dreams?: Resolver<Array<ResolversTypes['String']>, ParentType, ContextType>;
+  hasHair?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  hopes?: Resolver<Array<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  size?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  teeth?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
