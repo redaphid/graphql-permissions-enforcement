@@ -3,16 +3,23 @@
   "packageManager": "yarn@3.6.1",
   "type": "module",
   "scripts": {
-    "service": "node --loader esbuild-register/loader -r esbuild-register ./src/index.ts",
-    "web": "esbuild ./src/index.ts ./src/workers/* --format=esm --outdir=web --bundle --watch --servedir=web"
+    "codegen": "graphql-codegen",
+    "start": "node --loader esbuild-register/loader -r esbuild-register ./src/index.ts"
   },
   "devDependencies": {
-    "@types/audioworklet": "^0.0.48",
-    "esbuild": "^0.18.11",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/node": "^20.5.7",
+    "esbuild": "^0.19.2",
     "esbuild-register": "^3.4.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "graphql": "^16.8.0"
   }
 }
