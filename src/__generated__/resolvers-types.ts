@@ -160,6 +160,13 @@ export type ContactDirectiveArgs = {
 
 export type ContactDirectiveResolver<Result, Parent, ContextType = DataSourceContext, Args = ContactDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
+export type LinkDirectiveArgs = {
+  import?: Maybe<Array<Scalars['String']['input']>>;
+  url: Scalars['String']['input'];
+};
+
+export type LinkDirectiveResolver<Result, Parent, ContextType = DataSourceContext, Args = LinkDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
+
 export type MutationResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
   createThing?: Resolver<Maybe<ResolversTypes['Thing']>, ParentType, ContextType, RequireFields<MutationCreateThingArgs, 'thing'>>;
 }>;
@@ -183,4 +190,5 @@ export type Resolvers<ContextType = DataSourceContext> = ResolversObject<{
 
 export type DirectiveResolvers<ContextType = DataSourceContext> = ResolversObject<{
   contact?: ContactDirectiveResolver<any, any, ContextType>;
+  link?: LinkDirectiveResolver<any, any, ContextType>;
 }>;

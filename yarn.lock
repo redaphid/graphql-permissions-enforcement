@@ -15,12 +15,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/cache-control-types@npm:^1.0.3":
+"@apollo/cache-control-types@npm:^1.0.2, @apollo/cache-control-types@npm:^1.0.3":
   version: 1.0.3
   resolution: "@apollo/cache-control-types@npm:1.0.3"
   peerDependencies:
     graphql: 14.x || 15.x || 16.x
   checksum: 1c2791f3c7fa0fc609bd42cebcb6a0d1ccfcee9b22e54c4aa5af918944ae9dbdd45d7b84670afc6de34444e9226e9e82523bc3969805b506b86fd28dc9abc9fa
+  languageName: node
+  linkType: hard
+
+"@apollo/federation-internals@npm:2.5.4":
+  version: 2.5.4
+  resolution: "@apollo/federation-internals@npm:2.5.4"
+  dependencies:
+    "@types/uuid": ^9.0.0
+    chalk: ^4.1.0
+    js-levenshtein: ^1.1.6
+    uuid: ^9.0.0
+  peerDependencies:
+    graphql: ^16.5.0
+  checksum: 0640ed280d8e55d199d3aa78bf424748ac542df6817c62b1d7cb05ebae09a5d281725b4ca496015e0a477f396f1e6b88267e9f3230bf3c604cb2ab84f8cb8b7e
   languageName: node
   linkType: hard
 
@@ -94,6 +108,18 @@ __metadata:
   peerDependencies:
     graphql: ^16.6.0
   checksum: 28537d7646669a5dc1302cfd75d8a9bf473459ee585c6b778d174628a2cfb3f89a5ac742eca7de2a779b6c9e3f30da509a8787a71227520d009ac190aa7a9207
+  languageName: node
+  linkType: hard
+
+"@apollo/subgraph@npm:^2.5.4":
+  version: 2.5.4
+  resolution: "@apollo/subgraph@npm:2.5.4"
+  dependencies:
+    "@apollo/cache-control-types": ^1.0.2
+    "@apollo/federation-internals": 2.5.4
+  peerDependencies:
+    graphql: ^16.5.0
+  checksum: 57ab4c7f3752b4c7973408aa2543abed5304a342e04580e9e93c852c82bb97a803049eb3bd7bf967a6878e9153dc91268b7999ff6d7b816293479cb441f4ea6d
   languageName: node
   linkType: hard
 
@@ -1917,6 +1943,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^9.0.0":
+  version: 9.0.3
+  resolution: "@types/uuid@npm:9.0.3"
+  checksum: 3dde198defd71c067dd14b3050a8fe6d1ead5fe94ec318472e2c30a399d13f18941fe66cffabdcac7267177c9de2f975fdee6f0cc87cde610a2578e1ce4cc3af
+  languageName: node
+  linkType: hard
+
 "@types/ws@npm:^8.0.0":
   version: 8.5.5
   resolution: "@types/ws@npm:8.5.5"
@@ -3568,6 +3601,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-levenshtein@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "js-levenshtein@npm:1.1.6"
+  checksum: 409f052a7f1141be4058d97da7860e08efd97fc588b7a4c5cfa0548bc04f6d576644dae65ab630266dff685d56fb90d494e03d4d79cb484c287746b4f1bf0694
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -3863,6 +3903,7 @@ __metadata:
   resolution: "minimal-typescript@workspace:."
   dependencies:
     "@apollo/server": ^4.9.3
+    "@apollo/subgraph": ^2.5.4
     "@graphql-codegen/cli": ^5.0.0
     "@graphql-codegen/typescript": ^4.0.1
     "@graphql-codegen/typescript-resolvers": ^4.0.1
