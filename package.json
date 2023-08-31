@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.6.1",
   "type": "module",
   "scripts": {
-    "service": "node -r esbuild-register ./src/index.ts",
+    "service": "node --loader esbuild-register/loader -r esbuild-register ./src/index.ts",
     "web": "esbuild ./src/index.ts ./src/workers/* --format=esm --outdir=web --bundle --watch --servedir=web"
   },
   "devDependencies": {
