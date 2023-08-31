@@ -3255,7 +3255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.11.0":
+"graphql-tag@npm:^2.11.0, graphql-tag@npm:^2.12.6":
   version: 2.12.6
   resolution: "graphql-tag@npm:2.12.6"
   dependencies:
@@ -3911,6 +3911,7 @@ __metadata:
     esbuild: ^0.19.2
     esbuild-register: ^3.4.2
     graphql: ^16.8.0
+    graphql-tag: ^2.12.6
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft

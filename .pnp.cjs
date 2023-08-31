@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esbuild", "npm:0.19.2"],\
             ["esbuild-register", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:3.4.2"],\
             ["graphql", "npm:16.8.0"],\
+            ["graphql-tag", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:2.12.6"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=14eedb"]\
           ],\
           "linkType": "SOFT"\
@@ -1912,7 +1913,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["change-case-all", "npm:1.0.15"],\
             ["dependency-graph", "npm:0.11.0"],\
             ["graphql", "npm:16.8.0"],\
-            ["graphql-tag", "virtual:c23770cff4a87b145c6857c1224804e77a419189f2ceddeffdefc38df22a4c1ce86495a24d85075d28cbc239ead059dea5f586add0ef2ef4f001cfc4146cf270#npm:2.12.6"],\
+            ["graphql-tag", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:2.12.6"],\
             ["parse-filepath", "npm:1.0.2"],\
             ["tslib", "npm:2.5.3"]\
           ],\
@@ -4549,10 +4550,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:c23770cff4a87b145c6857c1224804e77a419189f2ceddeffdefc38df22a4c1ce86495a24d85075d28cbc239ead059dea5f586add0ef2ef4f001cfc4146cf270#npm:2.12.6", {\
-          "packageLocation": "./.yarn/__virtual__/graphql-tag-virtual-9e9ce5b81d/0/cache/graphql-tag-npm-2.12.6-99a5a7f6de-b15162a3d6.zip/node_modules/graphql-tag/",\
+        ["virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:2.12.6", {\
+          "packageLocation": "./.yarn/__virtual__/graphql-tag-virtual-011cc41c03/0/cache/graphql-tag-npm-2.12.6-99a5a7f6de-b15162a3d6.zip/node_modules/graphql-tag/",\
           "packageDependencies": [\
-            ["graphql-tag", "virtual:c23770cff4a87b145c6857c1224804e77a419189f2ceddeffdefc38df22a4c1ce86495a24d85075d28cbc239ead059dea5f586add0ef2ef4f001cfc4146cf270#npm:2.12.6"],\
+            ["graphql-tag", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:2.12.6"],\
             ["@types/graphql", null],\
             ["graphql", "npm:16.8.0"],\
             ["tslib", "npm:2.6.2"]\
@@ -5338,6 +5339,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esbuild", "npm:0.19.2"],\
             ["esbuild-register", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:3.4.2"],\
             ["graphql", "npm:16.8.0"],\
+            ["graphql-tag", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:2.12.6"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=14eedb"]\
           ],\
           "linkType": "SOFT"\

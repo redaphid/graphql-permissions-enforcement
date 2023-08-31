@@ -1,12 +1,14 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+import { buildSubgraphSchema } from "@apollo/subgraph";
+import gql from "graphql-tag";
 import Resolvers from './resolvers';
 import {readFileSync} from 'fs';
 
 const main = async () => {
   const server = new ApolloServer({
     resolvers: Resolvers,
-    typeDefs: readFileSync('./schema.graphql', 'utf-8'),
+    typeDefs: buildSubgraphSchema(gql(readFileSync('./schema.graphql', 'utf-8'))),
   });
 
   const { url } = await startStandaloneServer(server, {
