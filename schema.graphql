@@ -25,6 +25,7 @@ type Thing @key(fields: "id") {
   dreams: [String!]!
   hasHair: Boolean @public
   teeth: Int @public
+  isSecretlyAMonster: Boolean
 }
 
 input CreateThing {

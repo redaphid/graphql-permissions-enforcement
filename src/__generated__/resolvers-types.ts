@@ -49,6 +49,7 @@ export type Thing = {
   hasHair?: Maybe<Scalars['Boolean']['output']>;
   hopes: Array<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
+  isSecretlyAMonster?: Maybe<Scalars['Boolean']['output']>;
   name?: Maybe<Scalars['String']['output']>;
   size?: Maybe<Scalars['String']['output']>;
   teeth?: Maybe<Scalars['Int']['output']>;
@@ -177,6 +178,7 @@ export type ThingResolvers<ContextType = DataSourceContext, ParentType extends R
   hasHair?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   hopes?: Resolver<Array<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  isSecretlyAMonster?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   size?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   teeth?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;

@@ -3907,6 +3907,7 @@ __metadata:
     "@graphql-codegen/cli": ^5.0.0
     "@graphql-codegen/typescript": ^4.0.1
     "@graphql-codegen/typescript-resolvers": ^4.0.1
+    "@graphql-tools/utils": ^10.0.5
     "@types/node": ^20.5.7
     esbuild: ^0.19.2
     esbuild-register: ^3.4.2
