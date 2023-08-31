@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/audioworklet", "npm:0.0.48"],\
             ["esbuild", "npm:0.18.11"],\
             ["esbuild-register", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:3.4.2"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
@@ -233,6 +234,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/audioworklet", [\
+        ["npm:0.0.48", {\
+          "packageLocation": "./.yarn/cache/@types-audioworklet-npm-0.0.48-38ccd7c8c5-b6e915af06.zip/node_modules/@types/audioworklet/",\
+          "packageDependencies": [\
+            ["@types/audioworklet", "npm:0.0.48"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["debug", [\
         ["npm:4.3.4", {\
           "packageLocation": "./.yarn/cache/debug-npm-4.3.4-4513954577-3dbad3f94e.zip/node_modules/debug/",\
@@ -315,6 +325,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["minimal-typescript", "workspace:."],\
+            ["@types/audioworklet", "npm:0.0.48"],\
             ["esbuild", "npm:0.18.11"],\
             ["esbuild-register", "virtual:8000942a81dd42a197df5584a9fe82bc064ea95cb0bf7cf92be2de9a35478ce68d83a6ee00b6dfbf05c9b0cd8b00c323b6d246ac6fe69abd9771e5ea90f4b099#npm:3.4.2"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\

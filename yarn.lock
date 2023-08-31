@@ -159,6 +159,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/audioworklet@npm:^0.0.48":
+  version: 0.0.48
+  resolution: "@types/audioworklet@npm:0.0.48"
+  checksum: b6e915af06ae7cbb5043b0baba7778c162174dd036de4b953392d7f128e779e3c3e57d1513fef3b4bf78a67434b9f342016b467194ea1225f518f7066191541e
+  languageName: node
+  linkType: hard
+
 "debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -263,6 +270,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "minimal-typescript@workspace:."
   dependencies:
+    "@types/audioworklet": ^0.0.48
     esbuild: ^0.18.11
     esbuild-register: ^3.4.2
     typescript: ^5.1.6
