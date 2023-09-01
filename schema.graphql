@@ -10,7 +10,7 @@ extend schema
   )
 
 type Query {
-  thing(id: ID!): Thing
+  thing(id: ID!): Thing @public
 }
 
 type Mutation {
