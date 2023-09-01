@@ -1,5 +1,4 @@
-directive @public on FIELD_DEFINITION
-
+directive @public on FIELD_DEFINITION | OBJECT | INPUT_OBJECT | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
 extend schema
   @link(
     url: "https://specs.apollo.dev/federation/v2.3",
@@ -7,16 +6,16 @@ extend schema
       "@key"]
   )
 
-type Query {
-  thing(id: ID!): Thing @public
+type Query @public {
+  thing(id: ID! @public) : Thing @public
 }
 
 type Mutation {
   createThing(thing: CreateThing!): Thing
 }
 
-type Thing @key(fields: "id") {
-  id: ID!
+type Thing @key(fields: "id") @public {
+  id: ID! @public
   name: String @public
   size: String
   hopes: [String!]!
