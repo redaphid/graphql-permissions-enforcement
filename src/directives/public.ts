@@ -57,7 +57,7 @@ const removeNonPublicTypes = (schema: GraphQLSchema) => {
   }
 
   const filterNonPublicFields: FieldFilter = (typeName, fieldName, fieldConfig) => {
-    if (fieldName.startsWith('_')) return true;
+    // if (fieldName.startsWith('_')) return true;
     if (!hasPublicDirective(typeName, fieldName, fieldConfig)) return false;
     if (!typeFilterNonPublic(typeName, fieldConfig.type)) return false;
     if (isInputObjectType(fieldConfig.type)) {
@@ -96,7 +96,7 @@ export const PublicDirectiveTransformer = (schema: GraphQLSchema) => {
     filteredSchema = removeEmptyRootTypes(removeNonPublicTypes(filteredSchema));
     times++
   } while (printSchema(filteredSchema) !== lastSchemaString);
-  console.log(printSchema(filteredSchema));
+  console.log(printSchema(filteredSchema))
   return filteredSchema;
 };
 
