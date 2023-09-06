@@ -1,5 +1,5 @@
 import { ArgumentFilter, FieldFilter, ObjectFieldFilter, TypeFilter, filterSchema, getDirectives } from '@graphql-tools/utils';
-import { GraphQLSchema, isEnumType, isInputObjectType, isInterfaceType, isListType, isObjectType, isScalarType, isUnionType, printSchema } from 'graphql';
+import { DocumentNode, GraphQLSchema, isEnumType, isInputObjectType, isInterfaceType, isListType, isObjectType, isScalarType, isUnionType, printSchema } from 'graphql';
 
 const isEmptyRootType = (rootType, schema) => {
   if (!rootType) return true;
@@ -86,17 +86,7 @@ const removeNonPublicTypes = (schema: GraphQLSchema) => {
   });
 }
 
-export const PublicDirectiveTransformer = (schema: GraphQLSchema) => {
-  let filteredSchema = schema
-  let lastSchemaString = ''
-  let times = 0
-  do {
-    if(times > 10) throw new Error('PublicDirectiveTransformer failed to converge')
-    lastSchemaString = printSchema(filteredSchema);
-    filteredSchema = removeEmptyRootTypes(removeNonPublicTypes(filteredSchema));
-    times++
-  } while (printSchema(filteredSchema) !== lastSchemaString);
-  console.log(printSchema(filteredSchema))
-  return filteredSchema;
+export const PublicDirectiveTransformer = (schema: DocumentNode) => {
+  return true
 };
 
