@@ -29,6 +29,7 @@ const removeNonPublicTypes = (schema: GraphQLSchema) => {
 
   const hasPublicDirective: FieldFilter = (typeName, fieldName, fieldConfig) => {
     if (typeName.startsWith('_') || typeName.includes('__')) return true;
+    if(fieldName.startsWith('_') || fieldName.includes('__')) return true;
     return Boolean(fieldConfig.astNode?.directives?.some(d => d.name.value === 'public'));
   }
 
@@ -57,7 +58,6 @@ const removeNonPublicTypes = (schema: GraphQLSchema) => {
   }
 
   const filterNonPublicFields: FieldFilter = (typeName, fieldName, fieldConfig) => {
-    // if (fieldName.startsWith('_')) return true;
     if (!hasPublicDirective(typeName, fieldName, fieldConfig)) return false;
     if (!typeFilterNonPublic(typeName, fieldConfig.type)) return false;
     if (isInputObjectType(fieldConfig.type)) {
